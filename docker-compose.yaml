@@ -2,7 +2,7 @@ services:
 
   web:
     build:
-      context: .
+      context: web
     environment:
       #CREATE_CERT: yes
       EMAIL: mhanberry1@gmail.com
@@ -12,24 +12,16 @@ services:
       - 443:443
     volumes:
       - ./web:/usr/share/nginx/html/
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      - ./web/nginx.conf:/etc/nginx/conf.d/default.conf
       - certs:/etc/letsencrypt
 
   api:
     build:
-      context: .
-      dockerfile_inline: |
-        from node
-        workdir app
-        npm init
-        npm install express
+      context: api
     ports:
       - 8080:8080
     volumes:
-      - ./api:/
-      - ./web:/usr/share/nginx/html/
-      - ./nginx.conf:/etc/nginx/conf.d/default.conf
-      - certs:/etc/letsencrypt
+      - ./api:/app
 
 volumes:
   certs:
