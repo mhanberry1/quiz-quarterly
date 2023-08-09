@@ -4,6 +4,6 @@ workdir /app
 
 add package*.json .
 
-run npm i
+run npm i -g
 
 entrypoint npm start
