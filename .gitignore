@@ -1,2 +1,3 @@
 .*swp
 node_modules
+docker-compose.override.yaml
