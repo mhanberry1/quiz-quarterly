@@ -4,7 +4,7 @@ services:
     build:
       context: web
     environment:
-      #CREATE_CERT: yes
+      #CREATE_CERT: yes # Uncomment in production
       EMAIL: mhanberry1@gmail.com
       DOMAINS: quizquarterly.org,www.quizquarterly.org,api.quizquarterly.org
     ports:
@@ -18,6 +18,8 @@ services:
   api:
     build:
       context: api
+    environment:
+      JWT_SECRET_KEY: test # Override in production
     ports:
       - 8080:8080
     volumes:
