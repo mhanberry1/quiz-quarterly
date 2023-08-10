@@ -49,6 +49,21 @@ fbxLoader.load(
 );
 */
 
+
+fetch("assets/dice-set/scene.gltf").
+	then(response => response.text()).
+	then(text => {
+		console.log("DICE:");
+		console.log(text);
+	});
+
+fetch("assets/environment/environment.gltf").
+	then(response => response.text()).
+	then(text => {
+		console.log("ENV:");
+		console.log(text);
+	});
+
 const gltfLoader = new GLTFLoader();
 gltfLoader.load(
 	// "assets/environment/environment.gltf",
