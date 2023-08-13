@@ -16,7 +16,7 @@
 		<script type="module">
 			import { $ } from '/js/modules/common.js'
 
-			const endpoint = `http://api.${location.hostname}`
+			const endpoint = `${location.protocol}//api.${location.hostname}`
 
 			const _showOutput = output => {
 				$('#output').innerHTML = JSON.stringify(output, null, 4)
