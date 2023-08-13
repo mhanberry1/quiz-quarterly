@@ -32,11 +32,11 @@ const login = (username, password) => {
 }
 
 // Verify that an access token is valid
-const validateToken = token => {
+const validate = token => {
 	const secret = process.env.JWT_SECRET_KEY
 	const { expiration } = jwt.verify(token, secret)
 
 	if (expiration < Date.now()) throw 'Token expired'
 }
 
-export { login, validateToken }
+export default { login, validate }
