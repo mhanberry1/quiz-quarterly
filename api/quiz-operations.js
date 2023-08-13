@@ -1,8 +1,12 @@
-import { writeFileSync } from 'fs'
-import quizzes from './data/quizzes.json' assert { type: 'json' }
+import { existsSync, readFileSync, writeFileSync } from 'fs'
+
+const dataFile = './data/quizzes.json'
+const quizzes = existsSync(dataFile) ?
+	JSON.parse(readFileSync(dataFile)) :
+	[]
 
 const _writeFile = () => writeFileSync(
-	'./data/quizzes.json',
+	dataFile,
 	JSON.stringify(quizzes)
 )
 
