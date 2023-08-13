@@ -4,11 +4,10 @@ import session from './session-handler.js'
 import quiz from './quiz-operations.js'
 
 const app = express()
-const corsMiddleware = cors({ origin: '*' })
 const port = 8080
 
 app.use(express.json())
-app.use(corsMiddleware)
+app.use(cors())
 
 app.post('/login', (req, res) => {
 	const { username, password } = req.body
@@ -37,11 +36,10 @@ app.post('/quiz', (req, res) => {
 	const token = req.headers.authorization
 	const data = req.body
 
-	console.log(token)
 	session.validate(token)
 
 	try {
-		id = quiz.create(data)
+		const id = quiz.create(data)
 		res.json({ id })
 	} catch(e) {
 		console.error(e)

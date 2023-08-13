@@ -20,7 +20,7 @@ const update = (id, data) => {
 }
 
 const remove = id => {
-	quizzes[id] = undefined
+	quizzes.splice(id, 1)
 	_writeFile()
 }
 
