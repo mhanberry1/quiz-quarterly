@@ -14,6 +14,7 @@ services:
       - ./web:/usr/share/nginx/html/
       - ./web/nginx.conf:/etc/nginx/conf.d/default.conf
       - certs:/etc/letsencrypt
+      - quizzes:/usr/share/nginx/html/quizzes
 
   api:
     build:
@@ -25,7 +26,9 @@ services:
     volumes:
       - ./api:/app
       - data:/app/data
+      - quizzes:/app/quizzes
 
 volumes:
   certs:
   data:
+  quizzes:
