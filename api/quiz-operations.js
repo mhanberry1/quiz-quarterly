@@ -16,7 +16,7 @@ const get = id => id != undefined ? quizzes[id] : quizzes
 const create = data => {
 	quizzes.push(data)
 	_writeFile()
-	renderer.render(quizzes.length, data)
+	renderer.render(quizzes.length - 1, data)
 	return quizzes.length
 }
 

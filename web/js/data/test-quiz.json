@@ -1,0 +1,66 @@
+{
+	"title": "Test Quiz",
+	"questions": [
+		{
+			"title": "Question 1",
+			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+			"description": "the first question",
+			"choices": [
+				{
+					"text": "choice 1",
+					"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+					"result": 0
+				},
+				{
+					"text": "choice 2",
+					"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+					"result": 1
+				},
+				{
+					"text": "choice 3",
+					"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+					"result": 2
+				}
+			]
+		},
+		{
+			"title": "Question 2",
+			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+			"description": "the second question",
+			"choices": [
+				{
+					"text": "choice 1",
+					"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+					"result": 0
+				},
+				{
+					"text": "choice 2",
+					"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+					"result": 1
+				},
+				{
+					"text": "choice 3",
+					"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+					"result": 2
+				}
+			]
+		}
+	],
+	"results": [
+		{
+			"title": "result 1",
+			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+			"description": "the first result"
+		},
+		{
+			"title": "result 2",
+			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+			"description": "the second result"
+		},
+		{
+			"title": "result 3",
+			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+			"description": "the third result"
+		}
+	]
+}

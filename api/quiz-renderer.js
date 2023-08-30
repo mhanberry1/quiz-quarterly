@@ -1,11 +1,11 @@
 import { writeFileSync, rmSync } from 'fs'
 
-const _quiz_path = id => `./quizzes/${id}.html`
+const _quizPath = id => `./quizzes/${id}.html`
 
-const _use_template = data => JSON.stringify(data) //TODO
+const _useTemplate = data => JSON.stringify(data) //TODO
 
-const render = (id, data) => writeFileSync(_quiz_path(id), _use_template(data))
+const render = (id, data) => writeFileSync(_quizPath(id), _useTemplate(data))
 
-const remove = id => rmSync(_quiz_path(id))
+const remove = id => rmSync(_quizPath(id))
 
 export default { render, remove }
