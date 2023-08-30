@@ -1,10 +1,13 @@
 {
 	"title": "Test Quiz",
+	"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
+	"description": "a test quiz",
 	"questions": [
 		{
 			"title": "Question 1",
 			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
 			"description": "the first question",
+			"type": "radio",
 			"choices": [
 				{
 					"text": "choice 1",
@@ -27,6 +30,7 @@
 			"title": "Question 2",
 			"image": "https://media.proprofs.com/images/QM/user_images/2272798/9605837907.gif",
 			"description": "the second question",
+			"type": "checkbox",
 			"choices": [
 				{
 					"text": "choice 1",
